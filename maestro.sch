@@ -1,0 +1,646 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:USB_C_Plug J?
+U 1 1 6071B37E
+P 1600 5500
+F 0 "J?" H 1707 6767 50  0000 C CNN
+F 1 "USB_C_Plug" H 1707 6676 50  0000 C CNN
+F 2 "" H 1750 5500 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1750 5500 50  0001 C CNN
+	1    1600 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_C_Receptacle J?
+U 1 1 6071E35C
+P 5750 5500
+F 0 "J?" H 5320 5289 50  0000 R CNN
+F 1 "USB_C_Receptacle" H 5320 5198 50  0000 R CNN
+F 2 "" H 5900 5500 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 5900 5500 50  0001 C CNN
+	1    5750 5500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Shunt R?
+U 1 1 60726A04
+P 2950 4500
+F 0 "R?" V 2817 4500 50  0000 C CNN
+F 1 "10m" V 2726 4500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 2880 4500 50  0001 C CNN
+F 3 "~" H 2950 4500 50  0001 C CNN
+	1    2950 4500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3150 4500 5150 4500
+Wire Wire Line
+	5150 5000 5150 5100
+Wire Wire Line
+	5150 5300 5150 5200
+Wire Wire Line
+	6050 7100 6050 7250
+Wire Wire Line
+	6050 7250 1300 7250
+Wire Wire Line
+	1300 7250 1300 7100
+$Comp
+L power:VBUS #PWR?
+U 1 1 6072F9C0
+P 2300 4300
+F 0 "#PWR?" H 2300 4150 50  0001 C CNN
+F 1 "VBUS" H 2315 4473 50  0000 C CNN
+F 2 "" H 2300 4300 50  0001 C CNN
+F 3 "" H 2300 4300 50  0001 C CNN
+	1    2300 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 1200 7750 1200
+Wire Wire Line
+	7800 1000 7450 1000
+Text Label 2450 1000 0    50   ~ 0
+DP
+Text Label 2650 1200 0    50   ~ 0
+DM
+Wire Wire Line
+	2200 5000 2650 5000
+Wire Wire Line
+	2200 5200 2450 5200
+$Comp
+L Device:R R?
+U 1 1 60745BE0
+P 7300 1000
+F 0 "R?" V 7093 1000 50  0000 C CNN
+F 1 "100" V 7184 1000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 7230 1000 50  0001 C CNN
+F 3 "~" H 7300 1000 50  0001 C CNN
+	1    7300 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60746950
+P 7600 1200
+F 0 "R?" V 7393 1200 50  0000 C CNN
+F 1 "100" V 7484 1200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 7530 1200 50  0001 C CNN
+F 3 "~" H 7600 1200 50  0001 C CNN
+	1    7600 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6072E529
+P 2000 6950
+F 0 "#PWR?" H 2000 6700 50  0001 C CNN
+F 1 "GND" H 2005 6777 50  0000 C CNN
+F 2 "" H 2000 6950 50  0001 C CNN
+F 3 "" H 2000 6950 50  0001 C CNN
+	1    2000 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 7100 2350 7100
+Wire Wire Line
+	2200 4800 4350 4800
+Wire Wire Line
+	4200 4700 4200 2500
+Text Label 4200 2500 0    50   ~ 0
+CC1
+$Comp
+L Comparator:MCP6561-OT U?
+U 1 1 6073353E
+P 8100 1100
+F 0 "U?" H 8444 1146 50  0000 L CNN
+F 1 "MCP6561-OT" H 8444 1055 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8000 900 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MCP6561-1R-1U-2-4-1.8V-Low-Power-Push-Pull-Output-Comparator-DS20002139E.pdf" H 8100 1300 50  0001 C CNN
+	1    8100 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Comparator:MCP6561-OT U?
+U 1 1 6074159F
+P 8100 2600
+F 0 "U?" H 8444 2646 50  0000 L CNN
+F 1 "MCP6561-OT" H 8444 2555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8000 2400 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MCP6561-1R-1U-2-4-1.8V-Low-Power-Push-Pull-Output-Comparator-DS20002139E.pdf" H 8100 2800 50  0001 C CNN
+	1    8100 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60763DCF
+P 6600 2500
+F 0 "C?" V 6348 2500 50  0000 C CNN
+F 1 "1n" V 6439 2500 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 6638 2350 50  0001 C CNN
+F 3 "~" H 6600 2500 50  0001 C CNN
+	1    6600 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 6076836E
+P 8000 2300
+F 0 "#PWR?" H 8000 2150 50  0001 C CNN
+F 1 "+3V3" H 8015 2473 50  0000 C CNN
+F 2 "" H 8000 2300 50  0001 C CNN
+F 3 "" H 8000 2300 50  0001 C CNN
+	1    8000 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60768D6E
+P 8000 2900
+F 0 "#PWR?" H 8000 2650 50  0001 C CNN
+F 1 "GND" H 8005 2727 50  0000 C CNN
+F 2 "" H 8000 2900 50  0001 C CNN
+F 3 "" H 8000 2900 50  0001 C CNN
+	1    8000 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 607707B2
+P 7050 2300
+F 0 "R?" H 6980 2254 50  0000 R CNN
+F 1 "100k" H 6980 2345 50  0000 R CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6980 2300 50  0001 C CNN
+F 3 "~" H 7050 2300 50  0001 C CNN
+	1    7050 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 607707B8
+P 7050 2700
+F 0 "R?" H 6980 2654 50  0000 R CNN
+F 1 "100k" H 6980 2745 50  0000 R CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6980 2700 50  0001 C CNN
+F 3 "~" H 7050 2700 50  0001 C CNN
+	1    7050 2700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7050 2450 7050 2500
+Connection ~ 7050 2500
+Wire Wire Line
+	7050 2500 7050 2550
+$Comp
+L power:GND #PWR?
+U 1 1 607707C2
+P 7050 2850
+F 0 "#PWR?" H 7050 2600 50  0001 C CNN
+F 1 "GND" H 7055 2677 50  0000 C CNN
+F 2 "" H 7050 2850 50  0001 C CNN
+F 3 "" H 7050 2850 50  0001 C CNN
+	1    7050 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 607707C8
+P 7050 2150
+F 0 "#PWR?" H 7050 2000 50  0001 C CNN
+F 1 "+3V3" H 7065 2323 50  0000 C CNN
+F 2 "" H 7050 2150 50  0001 C CNN
+F 3 "" H 7050 2150 50  0001 C CNN
+	1    7050 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 2500 6750 2500
+$Comp
+L Device:R R?
+U 1 1 60774DB2
+P 7450 2500
+F 0 "R?" V 7657 2500 50  0000 C CNN
+F 1 "1k" V 7566 2500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 7380 2500 50  0001 C CNN
+F 3 "~" H 7450 2500 50  0001 C CNN
+	1    7450 2500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7050 2500 7300 2500
+$Comp
+L Device:R R?
+U 1 1 607764F2
+P 8200 2000
+F 0 "R?" V 8407 2000 50  0000 C CNN
+F 1 "1Meg" V 8316 2000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 8130 2000 50  0001 C CNN
+F 3 "~" H 8200 2000 50  0001 C CNN
+	1    8200 2000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8400 2600 8650 2600
+Wire Wire Line
+	8650 2600 8650 2000
+Wire Wire Line
+	8650 2000 8350 2000
+Wire Wire Line
+	7600 2500 7700 2500
+Wire Wire Line
+	8050 2000 7700 2000
+Wire Wire Line
+	7700 2000 7700 2500
+Connection ~ 7700 2500
+Wire Wire Line
+	7700 2500 7800 2500
+Connection ~ 2450 5200
+Connection ~ 2650 5000
+Wire Wire Line
+	2650 5000 5150 5000
+Wire Wire Line
+	2450 5200 5150 5200
+Wire Wire Line
+	2200 4700 4200 4700
+Connection ~ 4200 4700
+Wire Wire Line
+	4200 4700 5150 4700
+$Comp
+L Comparator:MCP6561-OT U?
+U 1 1 607E3B6D
+P 8100 4000
+F 0 "U?" H 8444 4046 50  0000 L CNN
+F 1 "MCP6561-OT" H 8444 3955 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8000 3800 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/MCP6561-1R-1U-2-4-1.8V-Low-Power-Push-Pull-Output-Comparator-DS20002139E.pdf" H 8100 4200 50  0001 C CNN
+	1    8100 4000
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 607E3B84
+P 6600 4100
+F 0 "C?" V 6348 4100 50  0000 C CNN
+F 1 "1n" V 6439 4100 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 6638 3950 50  0001 C CNN
+F 3 "~" H 6600 4100 50  0001 C CNN
+	1    6600 4100
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 607E3B90
+P 8000 4300
+F 0 "#PWR?" H 8000 4150 50  0001 C CNN
+F 1 "+3V3" H 8015 4473 50  0000 C CNN
+F 2 "" H 8000 4300 50  0001 C CNN
+F 3 "" H 8000 4300 50  0001 C CNN
+	1    8000 4300
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 607E3B9C
+P 7050 4300
+F 0 "R?" H 6980 4254 50  0000 R CNN
+F 1 "100k" H 6980 4345 50  0000 R CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6980 4300 50  0001 C CNN
+F 3 "~" H 7050 4300 50  0001 C CNN
+	1    7050 4300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 607E3BA2
+P 7050 3900
+F 0 "R?" H 6980 3854 50  0000 R CNN
+F 1 "100k" H 6980 3945 50  0000 R CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6980 3900 50  0001 C CNN
+F 3 "~" H 7050 3900 50  0001 C CNN
+	1    7050 3900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 4150 7050 4100
+Connection ~ 7050 4100
+Wire Wire Line
+	7050 4100 7050 4050
+$Comp
+L power:GND #PWR?
+U 1 1 607E3BAB
+P 7050 4450
+F 0 "#PWR?" H 7050 4200 50  0001 C CNN
+F 1 "GND" H 7055 4277 50  0000 C CNN
+F 2 "" H 7050 4450 50  0001 C CNN
+F 3 "" H 7050 4450 50  0001 C CNN
+	1    7050 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 607E3BB1
+P 7050 3750
+F 0 "#PWR?" H 7050 3600 50  0001 C CNN
+F 1 "+3V3" H 7065 3923 50  0000 C CNN
+F 2 "" H 7050 3750 50  0001 C CNN
+F 3 "" H 7050 3750 50  0001 C CNN
+	1    7050 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 4100 6750 4100
+$Comp
+L Device:R R?
+U 1 1 607E3BB8
+P 7450 4100
+F 0 "R?" V 7657 4100 50  0000 C CNN
+F 1 "1k" V 7566 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 7380 4100 50  0001 C CNN
+F 3 "~" H 7450 4100 50  0001 C CNN
+	1    7450 4100
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	7050 4100 7300 4100
+$Comp
+L Device:R R?
+U 1 1 607E3BBF
+P 8200 4600
+F 0 "R?" V 8407 4600 50  0000 C CNN
+F 1 "1Meg" V 8316 4600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 8130 4600 50  0001 C CNN
+F 3 "~" H 8200 4600 50  0001 C CNN
+	1    8200 4600
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	8400 4000 8650 4000
+Wire Wire Line
+	8650 4000 8650 4600
+Wire Wire Line
+	8650 4600 8350 4600
+Wire Wire Line
+	7600 4100 7700 4100
+Wire Wire Line
+	8050 4600 7700 4600
+Wire Wire Line
+	7700 4600 7700 4100
+Connection ~ 7700 4100
+Wire Wire Line
+	7700 4100 7800 4100
+Wire Wire Line
+	4350 4100 4350 4800
+Connection ~ 4350 4800
+Wire Wire Line
+	4350 4800 5150 4800
+Text Label 4350 4100 0    50   ~ 0
+CC2
+Wire Wire Line
+	4200 2500 6450 2500
+Wire Wire Line
+	4350 4100 6450 4100
+Connection ~ 5150 5200
+Connection ~ 5150 5000
+Wire Wire Line
+	7150 1000 2450 1000
+Wire Wire Line
+	2450 1000 2450 5200
+Wire Wire Line
+	2650 1200 2650 5000
+Wire Wire Line
+	2650 1200 7450 1200
+$Comp
+L Device:Ferrite_Bead_Small FB?
+U 1 1 60883A30
+P 2350 7000
+F 0 "FB?" H 2450 7046 50  0000 L CNN
+F 1 "Ferrite_Bead_Small" H 2450 6955 50  0000 L CNN
+F 2 "" V 2280 7000 50  0001 C CNN
+F 3 "~" H 2350 7000 50  0001 C CNN
+	1    2350 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:MCP1804x-3302xMB U?
+U 1 1 60887FCC
+P 1350 1600
+F 0 "U?" H 1350 1842 50  0000 C CNN
+F 1 "MCP1804x-3302xMB" H 1350 1751 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 1350 1800 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20002200D.pdf" H 1350 1550 50  0001 C CNN
+	1    1350 1600
+	1    0    0    -1  
+$EndComp
+Connection ~ 2350 7100
+$Comp
+L Device:Ferrite_Bead_Small FB?
+U 1 1 6088FA5F
+P 2300 4400
+F 0 "FB?" H 2400 4446 50  0000 L CNN
+F 1 "Ferrite_Bead_Small" H 2400 4355 50  0000 L CNN
+F 2 "" V 2230 4400 50  0001 C CNN
+F 3 "~" H 2300 4400 50  0001 C CNN
+	1    2300 4400
+	1    0    0    -1  
+$EndComp
+Connection ~ 2300 4500
+Wire Wire Line
+	2300 4500 2200 4500
+$Comp
+L power:VBUS #PWR?
+U 1 1 608905AF
+P 750 1400
+F 0 "#PWR?" H 750 1250 50  0001 C CNN
+F 1 "VBUS" H 765 1573 50  0000 C CNN
+F 2 "" H 750 1400 50  0001 C CNN
+F 3 "" H 750 1400 50  0001 C CNN
+	1    750  1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 607E3B96
+P 8000 3700
+F 0 "#PWR?" H 8000 3450 50  0001 C CNN
+F 1 "GND" H 8005 3527 50  0000 C CNN
+F 2 "" H 8000 3700 50  0001 C CNN
+F 3 "" H 8000 3700 50  0001 C CNN
+	1    8000 3700
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6074A6B0
+P 7450 3100
+F 0 "R?" H 7380 3054 50  0000 R CNN
+F 1 "100k" H 7380 3145 50  0000 R CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 7380 3100 50  0001 C CNN
+F 3 "~" H 7450 3100 50  0001 C CNN
+	1    7450 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6074AF3E
+P 7450 3500
+F 0 "R?" H 7380 3454 50  0000 R CNN
+F 1 "100k" H 7380 3545 50  0000 R CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 7380 3500 50  0001 C CNN
+F 3 "~" H 7450 3500 50  0001 C CNN
+	1    7450 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7450 3250 7450 3300
+Connection ~ 7450 3300
+Wire Wire Line
+	7450 3300 7450 3350
+$Comp
+L power:+3V3 #PWR?
+U 1 1 607671E7
+P 7450 2950
+F 0 "#PWR?" H 7450 2800 50  0001 C CNN
+F 1 "+3V3" H 7465 3123 50  0000 C CNN
+F 2 "" H 7450 2950 50  0001 C CNN
+F 3 "" H 7450 2950 50  0001 C CNN
+	1    7450 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6079C1E9
+P 7450 3650
+F 0 "#PWR?" H 7450 3400 50  0001 C CNN
+F 1 "GND" H 7455 3477 50  0000 C CNN
+F 2 "" H 7450 3650 50  0001 C CNN
+F 3 "" H 7450 3650 50  0001 C CNN
+	1    7450 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 4500 2750 4500
+Wire Wire Line
+	7800 2700 7800 3300
+Wire Wire Line
+	2350 7100 5750 7100
+Wire Wire Line
+	7450 3300 7800 3300
+Connection ~ 7800 3300
+Wire Wire Line
+	7800 3300 7800 3900
+$Comp
+L power:GND #PWR?
+U 1 1 608971C6
+P 1350 1900
+F 0 "#PWR?" H 1350 1650 50  0001 C CNN
+F 1 "GND" H 1355 1727 50  0000 C CNN
+F 2 "" H 1350 1900 50  0001 C CNN
+F 3 "" H 1350 1900 50  0001 C CNN
+	1    1350 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	750  1400 750  1600
+Wire Wire Line
+	750  1600 1050 1600
+$Comp
+L Device:C C?
+U 1 1 60899AF0
+P 750 1750
+F 0 "C?" H 635 1704 50  0000 R CNN
+F 1 "100n" H 635 1795 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 788 1600 50  0001 C CNN
+F 3 "~" H 750 1750 50  0001 C CNN
+	1    750  1750
+	-1   0    0    1   
+$EndComp
+Connection ~ 750  1600
+$Comp
+L power:GND #PWR?
+U 1 1 6089A930
+P 750 1900
+F 0 "#PWR?" H 750 1650 50  0001 C CNN
+F 1 "GND" H 755 1727 50  0000 C CNN
+F 2 "" H 750 1900 50  0001 C CNN
+F 3 "" H 750 1900 50  0001 C CNN
+	1    750  1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6089BEBB
+P 1900 1750
+F 0 "C?" H 1785 1704 50  0000 R CNN
+F 1 "100n" H 1785 1795 50  0000 R CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 1938 1600 50  0001 C CNN
+F 3 "~" H 1900 1750 50  0001 C CNN
+	1    1900 1750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6089BEC1
+P 1900 1900
+F 0 "#PWR?" H 1900 1650 50  0001 C CNN
+F 1 "GND" H 1905 1727 50  0000 C CNN
+F 2 "" H 1900 1900 50  0001 C CNN
+F 3 "" H 1900 1900 50  0001 C CNN
+	1    1900 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 1600 1900 1600
+$Comp
+L Connector:Conn_01x04_Male J?
+U 1 1 608A38C0
+P 10300 1200
+F 0 "J?" H 10272 1174 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 10272 1083 50  0000 R CNN
+F 2 "" H 10300 1200 50  0001 C CNN
+F 3 "~" H 10300 1200 50  0001 C CNN
+	1    10300 1200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 1100 8400 1100
+Wire Wire Line
+	10100 1200 9200 1200
+Wire Wire Line
+	9200 1200 9200 2600
+Wire Wire Line
+	9200 2600 8650 2600
+Connection ~ 8650 2600
+Wire Wire Line
+	8650 4000 9300 4000
+Wire Wire Line
+	9300 4000 9300 1300
+Wire Wire Line
+	9300 1300 10100 1300
+Connection ~ 8650 4000
+$Comp
+L power:GND #PWR?
+U 1 1 608ADC35
+P 9750 1400
+F 0 "#PWR?" H 9750 1150 50  0001 C CNN
+F 1 "GND" H 9755 1227 50  0000 C CNN
+F 2 "" H 9750 1400 50  0001 C CNN
+F 3 "" H 9750 1400 50  0001 C CNN
+	1    9750 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 1400 9750 1400
+$EndSCHEMATC
