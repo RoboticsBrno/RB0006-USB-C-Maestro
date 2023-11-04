@@ -1,0 +1,30 @@
+{
+    "layout": {
+        "hspace": "2mm",
+        "vspace": "2mm",
+        "rows": "5"
+    },
+    "source": {
+        "tolerance": "3mm"
+    },
+    "tabs": {
+        "type": "annotation",
+        "fillet": "0.5mm"
+    },
+    "cuts": {
+        "type": "mousebites",
+        "offset": "0.2mm",
+        "prolong": "-0.7mm"
+    },
+    "framing": {
+        "type": "frame",
+        "hspace": "9mm",
+        "width": "8mm",
+        "cuts": "v"
+    },
+    "tooling": {
+        "type": "3hole",
+        "hoffset": "4mm",
+        "voffset": "4mm"
+    }
+}
